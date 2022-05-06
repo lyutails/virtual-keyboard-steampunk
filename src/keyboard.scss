@@ -4,23 +4,20 @@
 }
 
 @font-face {
-    font-family: 'Truetype';
+    font-family: 'SteampunkGears';
     src: url('../../virtual-keyboard-steampunk/references/fonts/steampunk-font/AnyConv.com__SteampunkDemoByMartaVanEck-lwEe.woff');
 }
 
 @font-face {
-    font-family: 'Truetype';
-    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__Steamwreck-07pd.woff');
-    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__SteamwreckBold-e3Xp.woff');
-    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__SteamwreckBoldItalic-WLBY.woff');
-    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__SteamwreckItalic-aqmE.woff');
+    font-family: 'SteampunkMain';
+    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__Steamwreck-07pd.woff');   
 }
 
 .title_name {
     width: 800px;
     height: 200px;
-    font-size: 50px;
-    font-family: 'Truetype';
+    font-size: 150px;
+    font-family: 'SteampunkGears';
     color: #a87f50;
 }
 
@@ -28,7 +25,8 @@
     width: 1000px;
     height: 300px;
     font-size: 100px;
-    font-family: 'Truetype';
+    font-family: 'SteampunkMain';
     color: #2c1c13;
+    text-shadow: 0 0 10px #ffedd3;
 }
 

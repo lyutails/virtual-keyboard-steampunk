@@ -10,7 +10,7 @@ class Application extends Control {
         const keyboard = new Control(this.node, 'div', 'keyboard');
         const titleWrapper = new Control(this.node, 'div', 'title_name_wrapper');
         const steampunkTitle = new Control(this.node, 'div', 'title_name');
-        const dividingLine = new Control(this.node, 'div', 'dividing_line');       
+        const dividingLine = new Control(this.node, 'div', 'dividing_line');              
         //const about = new Control(this.node, 'div', 'about');
         layout.forEach(row => {
             const rowView = new Control(keyboard.node, 'div');
@@ -27,9 +27,13 @@ class Application extends Control {
 
 class Button extends Control {
     constructor(parentNode: HTMLElement, textContent: string) {
-        super(parentNode, 'div', 'keyboard_key', textContent)
+        super(parentNode, 'div', 'keyboard_key', textContent)        
+    }    
+}
 
-        /*const button = document.getElementById('button');
+
+
+/*const button = document.getElementById('button');
         document.addEventListener('keydown', detectKey);
 
             function detectKey(e: any) {
@@ -42,8 +46,6 @@ class Button extends Control {
                 log.textContent += `$(e.code)`;
             }
         }*/
-    }    
-}
 
 /*
 class eventHandlers {

@@ -23,6 +23,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
+            favicon: './references/gears_ai_svg/gear_5_b.svg'
         }),
 
         // Add your plugins here

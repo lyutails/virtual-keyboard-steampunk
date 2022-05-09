@@ -1,5 +1,3 @@
-import { log } from "console";
-import e from "express";
 import Control from "./control";
 import './keyboard.scss'
 

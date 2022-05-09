@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'SteampunkGears';
+    src: url('../../virtual-keyboard-steampunk/references/fonts/steampunk-font/AnyConv.com__SteampunkDemoByMartaVanEck-lwEe.woff');
+}
+
+@font-face {
+    font-family: 'SteampunkMain';
+    src: url('../../virtual-keyboard-steampunk/references/fonts/steamwreck-font/AnyConv.com__Steamwreck-07pd.woff');   
+}
+
+@font-face {
+    font-family: 'Princess Lulu';
+    src: url('../references/fonts/princess-lulu-font/AnyConv.com__PrincessLulu-lxBe.woff');
+}
+
+$base_color: #a87f50;
+$main_text_color: #2c1c13;
+$shadow_color_dark: rgba(15, 14, 12, 0.9);
+$shadow_color_light: rgba(237, 217, 186, 0.6);
+$base_metal_color: rgb(174, 137, 99);
+$text_on_screen_color: #37ffe0;
+$text_outer_glow: rgba(230, 255, 251, 0.8);
+$screen_color: rgba(134, 119, 95, 0.5);
+
+.favicon {
+    background-image: url(../references/gears_ai_svg/gear_both_l.svg);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: #251d1a;    
+}
+
+    .title_name_wrapper {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title_name {
+        width: 800px;
+        height: 200px;
+        font-size: 150px;
+        font-family: 'SteampunkGears';
+        color: $base_color;
+        position: inline-block; 
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+    }
+
+    .dividing_line {
+        width: 100%;
+        height: 30px;
+        top: 300px;
+        background-color: $base_color;
+        box-shadow: inset 0px -20px 35px -20px $shadow_color_dark, inset -10px -20px 0px -20px $shadow_color_light;        
+    }
+
+    .gear_1 {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: flex-end;
+        background-image: url(../references/gears_ai_svg/gear_both_l.svg);
+    }
+
+    .main_wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        //align-items: center;        
+    }
+
+    .screen {
+        width: 550px;
+        height: 300px;
+        background-color: $screen_color;
+        box-shadow: inset 0 0 10px $shadow_color_dark;  
+        font-size: 25px;
+        color: $text_on_screen_color;
+        font-family: 'SteampunkMain';
+        text-shadow: 0 0 15px $text_outer_glow;
+        border: solid 30px $base_color;     
+        border-radius: 20px;    
+        margin: 0px 0px 50px 0px;
+        
+        .screen_half_transparent {
+
+        }
+    }
+
+    .keyboard {
+        position: fixed;        
+        width: 1000px;
+        height: 450px;        
+        padding: 20px 20px 20px 20px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        box-shadow: inset 0 0 10px $shadow_color_dark;
+        border-radius: 35px;
+
+        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #f5e7b6 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    }
+
+        .plate_for_keyboard_name {
+            width: 600px;
+            height: 100px;
+            border: solid 10px #5b3f24;
+            border-radius: 25px;
+            background: radial-gradient(ellipse farthest-corner at right bottom, #c3a933 0%, #c08715 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #efd36c 0%, #e0da6d 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+            top: 0;
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+            margin: 10px 0px 20px 0px;
+        }
+    
+            .name_on_keyboard {
+                width: 600px;
+                height: 100px;
+                font-size: 80px;
+                font-family: 'SteampunkMain';
+                color: #2c1c13;
+                text-shadow: 0 0 10px #ffedd3;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .F_buttons_block {
+                width: 600px;
+                height: 80px;                
+            }            
+
+            .main_buttons_block {
+                width: 900px;
+                height: 470px;
+                display: flex;
+                justify-content: center; 
+            }
+
+                .left_big_block {
+                    width: 600px;
+                    height: 470px;                    
+                }
+
+                .arrows_and_upper_block {
+                    width: 200px;
+                    height: 600px;
+                    display: flex;
+                    flex-direction: column;                
+
+                    .six_buttons_block {
+                        width: 200px;
+                        height: 200px;
+                    }
+    
+                    .arrow_buttons {
+                        width: 200px;
+                        height: 200px; 
+                    }
+                }                
+
+                .very_right_block {
+                    width: 200px;
+                    height: 600px;
+                }
+
+            .keyboard_keys_russian {
+                width: 900px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+            }
+
+                .keyboard_key {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                        radial-gradient(ellipse farthest-corner at left top, #f5e7b6 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    min-width: 30px;
+                    min-width: 40px;
+                    max-width: 100px;
+                    height: 40px;
+                    margin: 1px;
+                    border-radius: 10px;
+                    border: solid 3px #412a1d;
+                    outline: none;
+                    cursor: pointer;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: top;
+                    padding: 0;
+                    box-shadow: inset 0 0 4px $shadow_color_dark;
+                }
+
+            .keyboard_keys_english {
+                width: 900px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+                display: none;
+            }
+
+                .keyboard_key {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                        radial-gradient(ellipse farthest-corner at left top, #f5e7b6 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    min-width: 30px;
+                    min-width: 40px;
+                    max-width: 100px;
+                    height: 40px;
+                    margin: 1px;
+                    border-radius: 10px;
+                    border: solid 3px #412a1d;
+                    outline: none;
+                    cursor: pointer;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: top;
+                    padding: 0;
+                }
+
+            .keyboard_keys_japanese {
+                width: 900px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap;
+                display: none;
+            }
+
+                .keyboard_key {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                        radial-gradient(ellipse farthest-corner at left top, #f5e7b6 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    min-width: 40px;
+                    max-width: 100px;
+                    height: 40px;
+                    margin: 1px;
+                    border-radius: 10px;
+                    border: solid 3px #412a1d;
+                    outline: none;
+                    cursor: pointer;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: top;
+                    padding: 0;
+                }
+
+                .keyboard_key:active {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #705e0c 0%, #8d630f 8%, #7c5c19 30%, #70571c 40%, transparent 80%),
+                    radial-gradient(ellipse farthest-corner at left top, #cdb14c 0%, #969636 8%, #836c2d 25%, #3d2f0e 62.5%, #2d2209 100%);
+                    border: solid 3px #321f14;
+                }
+
+                .keyboard_key_widest {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                        radial-gradient(ellipse farthest-corner at left top, #f5e7b6 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);                    
+                    width: 140px;
+                    height: 40px;
+                    margin: 1px;
+                    border-radius: 10px;
+                    border: solid 3px #412a1d;
+                    outline: none;
+                    cursor: pointer;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    vertical-align: top;
+                    padding: 0;
+                }
+
+                .keyboard_key_widest:active {
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #705e0c 0%, #8d630f 8%, #7c5c19 30%, #70571c 40%, transparent 80%),
+                    radial-gradient(ellipse farthest-corner at left top, #cdb14c 0%, #969636 8%, #836c2d 25%, #3d2f0e 62.5%, #2d2209 100%);
+                    border: solid 3px #321f14;
+                }
+
+                .keyboard_key_wide {
+                    
+                }
+
+    .about {
+        width: 200px;
+        height: 80px;
+        right: 0;
+        display: inline-block;                   
+
+        .credentials {
+            width: 200px;
+            height: 20px;
+            color:rgb(174, 137, 99);
+            font-family: 'SteampunkMain';
+            font-size: 20px;
+        }
+
+        .take_a_look_and_touch {
+            width: 200px;
+            height: 20px;
+            color:rgb(174, 137, 99);
+            font-family: 'SteampunkMain';
+            font-size: 20px;
+        }
+
+        .more_keyboards {
+            width: 200px;
+            height: 20px;
+            color: rgb(174, 137, 99);
+            font-family: 'SteampunkMain';
+            font-size: 20px;
+        }
+
+        .creator {
+            width: 80px;
+            height: 20px;
+            color: #f9f6e7;
+            font-family: 'Princess Lulu';
+            font-size: 20px;
+        }
+    }
+
+
+

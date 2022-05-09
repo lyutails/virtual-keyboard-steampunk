@@ -8,10 +8,10 @@ class Application extends Control {
         super(parentNode, 'div', 'background')
         const output = new Control(this.node, 'div', 'screen');
         const keyboard = new Control(this.node, 'div', 'keyboard');
-        const dividingLine = new Control(this.node, 'div', 'dividing_line');
         const titleWrapper = new Control(this.node, 'div', 'title_name_wrapper');
         const steampunkTitle = new Control(this.node, 'div', 'title_name');
-        const about = new Control(this.node, 'div', 'about');
+        const dividingLine = new Control(this.node, 'div', 'dividing_line');       
+        //const about = new Control(this.node, 'div', 'about');
         layout.forEach(row => {
             const rowView = new Control(keyboard.node, 'div');
             row.forEach(value => {
@@ -20,7 +20,8 @@ class Application extends Control {
                     output.node.textContent += value;                
                 } 
             }) 
-        })        
+        })
+
     }    
 }
 
@@ -67,14 +68,14 @@ class eventHandlers {
 });
 */
   
-class EventHandler {
+/*class EventHandler {
     static RegisterKeyPress(input: string) {
         document.getElementById(input).addEventListener('keydown', (e: KeyboardEvent) => {
             //you have your key code here
             console.log(e.keyCode);
         })
     }
-}
+}*/
 
 /*window.addEventListener('keydown', function(event)) {
     const p = document.createElement('p');
@@ -92,5 +93,12 @@ const keyLayout = [
     ['Ctrl', 'windows', 'Alt', 'Space', 'windows', 'Alt', 'Space', 'windows', 'rmb', 'Ctrl']                    
 ];
 
+/*'Insert', 'Home', 'Page Up', 'Delete', 'End',
+                    'Page Down', '\', '/', '*', '-', '7', '8', '9', '4', '5', '6', '1', '2', '3', '0',
+                    '. ,', '+ =', 'Enter'*/
+
 new Application(document.body, keyLayout);
+
+
+
 

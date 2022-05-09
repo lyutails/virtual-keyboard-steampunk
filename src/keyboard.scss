@@ -27,6 +27,10 @@ $text_on_screen_color: #37ffe0;
 $text_outer_glow: rgba(230, 255, 251, 0.8);
 $screen_color: rgba(134, 119, 95, 0.5);
 
+.favicon {
+    background-image: url(../references/gears_ai_svg/gear_both_l.svg);
+}
+
 .background {
     width: 100%;
     height: 100%;
@@ -197,6 +201,7 @@ $screen_color: rgba(134, 119, 95, 0.5);
                     align-items: center;
                     vertical-align: top;
                     padding: 0;
+                    box-shadow: inset 0 0 4px $shadow_color_dark;
                 }
 
             .keyboard_keys_english {

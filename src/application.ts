@@ -5,11 +5,7 @@ class Application extends Control {
     constructor(parentNode: HTMLElement, layout: Array<Array<string>>) {
         super(parentNode, 'div', 'background')
         const output = new Control(this.node, 'div', 'screen');
-        const keyboard = new Control(this.node, 'div', 'keyboard');
-        const titleWrapper = new Control(this.node, 'div', 'title_name_wrapper');
-        const steampunkTitle = new Control(this.node, 'div', 'title_name');
-        const dividingLine = new Control(this.node, 'div', 'dividing_line');              
-        //const about = new Control(this.node, 'div', 'about');
+        const keyboard = new Control(this.node, 'div', 'keyboard');   
         layout.forEach(row => {
             const rowView = new Control(keyboard.node, 'div');
             row.forEach(value => {
@@ -17,11 +13,19 @@ class Application extends Control {
                 button.node.onclick = () => {
                     output.node.textContent += value;                
                 } 
-            }) 
+            })
         })
-
+        const titleWrapper = new Control(this.node, 'div', 'title_name_wrapper');
+        const dividingLine = new Control(this.node, 'div', 'dividing_line');
+        const about = new Control(this.node, 'div', 'about');
+        const steampunkTitle = new Control(this.node, 'div', 'title_name');
+        const createTitle = document.getElementById('.title_name');
+        const newElement = document.createElement('div');        
+        newElement.innerText = 'STEAMPUNK';
+        createTitle.appendChild(newElement);
     }    
 }
+
 
 class Button extends Control {
     constructor(parentNode: HTMLElement, textContent: string) {
@@ -29,7 +33,7 @@ class Button extends Control {
     }    
 }
 
-
+//document.addEventListener(onkeydown)
 
 /*const button = document.getElementById('button');
         document.addEventListener('keydown', detectKey);
@@ -84,7 +88,7 @@ class eventHandlers {
 }, true);*/
 
 
-const keyLayout = [
+const keyLayoutRussian = [
     ['Esc', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12'],
     ['~ ё', '! 1', '" 2', '№ 3', '; 4', '% 5', ': 6', '? 7', '* 8', '( 9', ') 0', '- _', '+ =', 'Backspace'],
     ['Tab', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ'],
@@ -93,12 +97,16 @@ const keyLayout = [
     ['Ctrl', 'windows', 'Alt', 'Space', 'windows', 'Alt', 'Space', 'windows', 'rmb', 'Ctrl']                    
 ];
 
-/*'Insert', 'Home', 'Page Up', 'Delete', 'End',
-                    'Page Down', '\', '/', '*', '-', '7', '8', '9', '4', '5', '6', '1', '2', '3', '0',
+const keyArrowsLayout = ['🔼', '🖤', '🔽', '◀'];
+
+/*['Insert', 'Home', 'Page Up',
+  'Delete', 'End', 'Page Down']*/
+
+/*'\', '/', '*', '-', '7', '8', '9', '4', '5', '6', '1', '2', '3', '0',
                     '. ,', '+ =', 'Enter'*/
 
-new Application(document.body, keyLayout);
-
+new Application(document.body, keyLayoutRussian);
+//new Application(document.body, keyArrowsLayout);
 
 
 
